@@ -1,14 +1,10 @@
 def palindrome(str):
-    boolean_palindrom = False
-    text_list = list(str)
-    no_space = []
-    for i in range(len(text_list)):
-        if text_list[i] != " ":
-            no_space.append(text_list[i])
-    print(no_space)
-    print (no_space[::-1])
-    # if no_space.reverse() == no_space:
-    #     return boolean_palindrom
+    list_text = [item.lower() for item in list(str)]
+    nospace_list_text = []
+    for i in range(len(list_text)):
+        if list_text[i] != " ":
+            nospace_list_text.append(list_text[i])
+    return nospace_list_text == nospace_list_text[::-1]
 
 
 def main():
